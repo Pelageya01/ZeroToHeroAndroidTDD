@@ -106,7 +106,7 @@ class CountTest {
 
     @Test(expected = IllegalStateException::class)
     fun test_max_less_than_min() {
-        Count.Base(step = 5, max = 0, min = 1)
+        Count.Base(step = 5, max = 7, min = 8)
     }
 
     @Test
