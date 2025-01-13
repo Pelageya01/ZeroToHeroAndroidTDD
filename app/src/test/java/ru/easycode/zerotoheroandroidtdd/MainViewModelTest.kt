@@ -23,7 +23,6 @@ class MainViewModelTest {
         Dispatchers.setMain(UnconfinedTestDispatcher())
     }
 
-    @OptIn(ExperimentalCoroutinesApi::class)
     @After
     fun tearDown() {
         Dispatchers.resetMain()
