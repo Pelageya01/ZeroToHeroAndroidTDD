@@ -1,4 +1,4 @@
-package ru.easycode.zerotoheroandroidtdd;
+package ru.easycode.zerotoheroandroidtdd
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -10,6 +10,8 @@ class MainViewModel(
         private val repository: Repository) {
 
     private val viewModelScope = CoroutineScope(SupervisorJob() + Dispatchers.Main.immediate)
+
+    fun liveData() = liveDataWrapper.liveData()
 
     // Trigger loading, update UI states via liveDataWrapper
     fun load() {
